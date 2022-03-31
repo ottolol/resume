@@ -4,7 +4,22 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: normal;
+}
+/* dark */
+.dark {
+    background-color: rgb(30, 32, 32);
+}
+body.dark {
+    color: #0f141e;
+}
+.dark .info {
+    color: rgba(255, 255, 255, 0.8);
+}
+/* light */
+.light {
     background-color: azure;
+}
+body.light {
     color: #0f141e;
 }
 a {
@@ -29,12 +44,28 @@ a:visited {
     margin-bottom: 20px;
     display: flex;
 }
-
+.theme-name {
+    display: none;
+}
+@media (max-width: 650px) {
+    .info-switch {
+        text-align: right;
+        margin-top: 10px;
+    }
+    .theme-name {
+        display: block;
+        float: left;
+    }
+}
 .info-text {
     margin-left: 40px;
 }
+@media (max-width: 650px) {
+    .info-text {
+        margin-left: 0px;
+    }
+}
 .info-text p {
-    /* font-weight: bold; */
     color: #8c8c8c;
     margin: 0;
 }
@@ -80,6 +111,9 @@ a:visited {
 }
 .bg-light {
     background: #f8f9fa;
+}
+.bg-azure {
+    background: azure;
 }
 .bg-hobbi {
     background: #d7d7d7;
@@ -150,4 +184,66 @@ a:visited {
         margin-bottom: 10px;
         width: 100%;
     }
+}
+
+/* switch theme */
+.checkbox-google {
+	display: inline-block;    
+	height: 28px;    
+	line-height: 28px;      
+	margin-right: 10px;       
+	position: relative;
+	vertical-align: middle;
+	font-size: 14px;
+	user-select: none;	
+}
+.checkbox-google .checkbox-google-switch {
+	display: inline-block;	
+	width: 30px;
+	height: 14px;	
+	border-radius: 16px;
+    border: 1px solid rgba(80, 80, 80, 0.3);
+	position: relative;
+	top: 6px;			
+	vertical-align: top;
+	background: #fff;
+	transition: .2s;
+}
+.checkbox-google .checkbox-google-switch:before {
+	content: '';
+	display: inline-block;	
+	/* width: 20px;	
+	height: 20px; */
+    width: 8px;	
+	height: 8px;
+	position: absolute;
+	/* top: -3px;
+	left: -1px; */
+    top: 3px;
+	left: 4px;
+	background: #000;
+	border-radius: 50%;
+	/* box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12); */
+	transition: .15s;		
+}
+.checkbox-google input[type=checkbox] {
+	display: block;	
+	width: 0;
+	height: 0;	
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+.checkbox-google input[type=checkbox]:checked + .checkbox-google-switch {
+	background: rgb(30, 32, 32);
+}
+.checkbox-google input[type=checkbox]:checked + .checkbox-google-switch:before {
+	background: #fff;
+	transform:translateX(15px);
+}
+
+/* Hover */
+.checkbox-google input[type="checkbox"]:not(:disabled) + .checkbox-google-switch {
+	cursor: pointer;
+	border-color: rgba(0, 0, 0, .3);
 }

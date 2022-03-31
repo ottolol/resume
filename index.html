@@ -11,7 +11,7 @@
     <title>Резюме Свешникова Алексея</title>
 </head>
 
-<body>
+<body class="page dark">
     <div class="container">
         <div class="info">
             <img src="img/ava.jpg" alt="Свешников Алексей" class="avatar">
@@ -26,6 +26,13 @@
                 <p><a href="https://vk.com/otto_lol" target="_blank">Vkontakte</a> |
                     <a href="https://t.me/ottolol" target="_blank">Telegram</a>
                 </p>
+            </div>
+            <div class="info-switch">
+                <span class="theme-name">Тёмная тема</span>
+                <label class="checkbox-google">
+                    <input type="checkbox">
+                    <span class="checkbox-google-switch"></span>
+                </label>
             </div>
         </div>
 
@@ -77,7 +84,7 @@
             </ol>
         </div>
 
-        <div class="card b0">
+        <div class="card bg-azure b0">
             <h2>Связаться со мной:</h2>
             <form action="/" class="form">
                 <div class="form-row">
@@ -100,15 +107,7 @@
         </div>
     </div>
 
-    <script>
-        let btn = document.querySelector('.btn');
-
-        function preventDef(event) {
-            event.preventDefault();
-        };
-
-        btn.addEventListener('click', preventDef);
-    </script>
+    <script src="js/app.js"></script>
 
     <!-- ul>li{element $}*5 -->
     <!-- lorem10 -->
